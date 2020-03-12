@@ -95,6 +95,8 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 MediaPlayer mediaPlayer = new MediaPlayer();
                 try {
+
+                    //comen
                     mediaPlayer.setDataSource(outputFile);
                     mediaPlayer.prepare();
                     mediaPlayer.start();
