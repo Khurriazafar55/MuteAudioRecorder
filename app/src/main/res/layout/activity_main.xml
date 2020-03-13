@@ -49,5 +49,29 @@
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         />
+    <Button
+        android:id="@+id/buttonStartService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorAccent"
+        android:padding="16dp"
+        android:text="Start Service"
+        android:textColor="#fff"
+      />
+    <Button
+        android:id="@+id/buttonStopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        android:padding="16dp"
+        android:text="Stop Service"
+        android:textColor="#fff"
+        />
 
 </LinearLayout>
