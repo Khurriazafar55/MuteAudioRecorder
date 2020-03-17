@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity
         myAudioRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
         myAudioRecorder.setOutputFile(outputFile);
         record.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 record();
@@ -82,14 +83,15 @@ public class MainActivity extends AppCompatActivity
         });
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 myAudioRecorder.stop();
                 myAudioRecorder.release();
                 myAudioRecorder = null;
-              record.setEnabled(true);
+                record.setEnabled(true);
                 stop.setEnabled(false);
                 play.setEnabled(true);
-           //     Toast.makeText(getApplicationContext(), "Audio Recorder successfully", Toast.LENGTH_LONG).show();
+           // Toast.makeText(getApplicationContext(), "Audio Recorder successfully", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -110,15 +112,17 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-      mute.setOnClickListener(new View.OnClickListener() {
+      mute.setOnClickListener(new View.OnClickListener()
+ {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+      {
             AudioManager audioManager = (AudioManager)
                         getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
             // get original mode
                 int originalMode = audioManager.getMode();
 
-            // if we put MODE_IN_CALL it will mute microhpne on call also
+            // if we put MODE_IN_CALL it will mute microphone on call also
                 audioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
             // change mute
                 boolean state = !audioManager.isMicrophoneMute();
